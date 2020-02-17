@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "e9707ee0-29b0-4796-8760-9988715df777",
+		"name": "Hotel Listing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8056/hotels/search?name=T",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8056",
+					"path": [
+						"hotels",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "T"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Populate  or Dump data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Windows/Downloads/Singapore_Listings3026f58.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}:8056/hotels/csv-file",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8056",
+					"path": [
+						"hotels",
+						"csv-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Hotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8056/hotels/all",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8056",
+					"path": [
+						"hotels",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
